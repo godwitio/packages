@@ -1,6 +1,6 @@
 {
     "version": "0.2.3",
-    "description": "Plan-first S3 object storage migration and sync CLI",
+    "description": "Plan-first S3 object storage migration and sync CLI. Commercial software with a permanent free tier (10 GB/run). 30-day trial (50 GB) available at https://godwit.io \u2014 no credit card required. Paid plans from \u20ac15/month.",
     "homepage": "https://godwit.io",
     "license": {
         "identifier": "Proprietary",

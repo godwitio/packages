@@ -31,6 +31,15 @@ class GodwitSync < Formula
     bin.install "godwit"
   end
 
+  def caveats
+    <<~EOS
+      Godwit Sync is commercial software.
+      A permanent free tier (10 GB per run) is included with no registration.
+      Register at https://godwit.io for a 30-day trial (50 GB) — no credit card required.
+      Paid plans start at EUR 15/month. See https://godwit.io/pricing
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/godwit --version")
   end

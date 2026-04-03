@@ -9,7 +9,7 @@ PackageUrl: https://godwit.io/downloads
 License: Proprietary
 LicenseUrl: https://godwit.io/terms
 ShortDescription: Plan-first S3 object storage migration and sync CLI
-Description: Resumable, observable migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and S3-to-local transfers.
+Description: Resumable, observable migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and S3-to-local transfers. Commercial software with a permanent free tier (10 GB/run). 30-day trial (50 GB) available at https://godwit.io — no credit card required. Paid plans from €15/month.
 Moniker: godwit
 Tags:
   - s3

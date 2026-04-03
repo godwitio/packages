@@ -6,10 +6,20 @@
     <title>Godwit Sync</title>
     <authors>Godwit</authors>
     <owners>godwitio</owners>
+    <copyright>Copyright (c) 2026 Godwit</copyright>
+    <summary>Plan-first S3 object storage migration and sync CLI</summary>
     <projectUrl>https://godwit.io</projectUrl>
+    <iconUrl>https://godwit.io/img/godwit-sm.svg</iconUrl>
     <licenseUrl>https://godwit.io/terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Plan-first S3 object storage migration and sync CLI. Resumable, observable migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and S3-to-local transfers.</description>
+    <description>Plan-first S3 object storage migration and sync CLI. Resumable, observable
+      migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and
+      S3-to-local transfers.
+
+      NOTE: This is commercial software. A permanent free tier (10 GB per run, no registration
+      required) is included. Register a free account at https://godwit.io to get a 30-day trial
+      license with 50 GB per run — no credit card required. Paid plans start at €15/month. See
+      https://godwit.io/pricing for details.</description>
     <tags>s3 object-storage sync migration cloud-storage backup data-transfer</tags>
     <packageSourceUrl>https://github.com/godwitio/packages</packageSourceUrl>
     <docsUrl>https://godwit.io/docs</docsUrl>
