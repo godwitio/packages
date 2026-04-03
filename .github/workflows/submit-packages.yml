@@ -10,6 +10,7 @@ on:
 
 jobs:
   winget:
+    if: false
     name: Submit to winget-pkgs
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -40,6 +41,7 @@ jobs:
       - name: Pack and push to Chocolatey
         run: |
           choco pack chocolatey/godwit-sync.nuspec
-          choco push godwit-sync.*.nupkg --source https://push.chocolatey.org/ --api-key $env:CHOCO_API_KEY
+          $nupkg = (Get-Item godwit-sync.*.nupkg).FullName
+          choco push $nupkg --source https://push.chocolatey.org/ --api-key $env:CHOCO_API_KEY
         env:
           CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
