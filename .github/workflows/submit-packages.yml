@@ -1,0 +1,45 @@
+name: Submit to package managers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "winget/**"
+      - "chocolatey/**"
+  workflow_dispatch:
+
+jobs:
+  winget:
+    name: Submit to winget-pkgs
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version from manifest
+        id: version
+        run: |
+          version=$(grep '^PackageVersion:' winget/GodwitIO.GodwitSync.yaml | awk '{print $2}')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to winget-pkgs
+        uses: vedantmgoyal9/winget-releaser@v2
+        with:
+          identifier: GodwitIO.GodwitSync
+          version: ${{ steps.version.outputs.version }}
+          installers-regex: '\.zip$'
+          token: ${{ secrets.WINGET_GH_TOKEN }}
+
+  chocolatey:
+    name: Submit to Chocolatey
+    runs-on: windows-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pack and push to Chocolatey
+        run: |
+          choco pack chocolatey/godwit-sync.nuspec
+          choco push godwit-sync.*.nupkg --source https://push.chocolatey.org/ --api-key $env:CHOCO_API_KEY
+        env:
+          CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
