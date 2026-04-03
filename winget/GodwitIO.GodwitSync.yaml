@@ -19,6 +19,8 @@ Tags:
   - cloud-storage
   - backup
   - data-transfer
+Commands:
+  - godwit
 Installers:
   - Architecture: x64
     InstallerType: zip
@@ -28,5 +30,8 @@ Installers:
     NestedInstallerFiles:
       - RelativeFilePath: godwit.exe
         PortableCommandAlias: godwit
+    AppsAndFeaturesEntries:
+      - DisplayName: Godwit Sync
+        Publisher: Godwit
 ManifestType: singleton
 ManifestVersion: 1.12.0
