@@ -32,6 +32,7 @@ jobs:
           token: ${{ secrets.WINGET_GH_TOKEN }}
 
   chocolatey:
+    if: false
     name: Submit to Chocolatey
     runs-on: windows-latest
     continue-on-error: true
