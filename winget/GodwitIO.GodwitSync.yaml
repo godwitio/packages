@@ -1,14 +1,16 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.singleton.1.6.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.singleton.1.12.0.schema.json
 PackageIdentifier: GodwitIO.GodwitSync
 PackageVersion: 0.2.3
-PackageName: Godwit Sync
+PackageLocale: en-US
 Publisher: Godwit
 PublisherUrl: https://godwit.io
+PackageName: Godwit Sync
 PackageUrl: https://godwit.io/downloads
 License: Proprietary
 LicenseUrl: https://godwit.io/terms
 ShortDescription: Plan-first S3 object storage migration and sync CLI
 Description: Resumable, observable migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and S3-to-local transfers.
+Moniker: godwit
 Tags:
   - s3
   - object-storage
@@ -27,4 +29,4 @@ Installers:
       - RelativeFilePath: godwit.exe
         PortableCommandAlias: godwit
 ManifestType: singleton
-ManifestVersion: 1.6.0
+ManifestVersion: 1.12.0
