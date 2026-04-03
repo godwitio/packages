@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>godwit-sync</id>
+    <version>0.2.3</version>
+    <title>Godwit Sync</title>
+    <authors>Godwit</authors>
+    <owners>godwitio</owners>
+    <projectUrl>https://godwit.io</projectUrl>
+    <licenseUrl>https://godwit.io/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Plan-first S3 object storage migration and sync CLI. Resumable, observable migrations for large S3-compatible object storage. Supports S3-to-S3, local-to-S3, and S3-to-local transfers.</description>
+    <tags>s3 object-storage sync migration cloud-storage backup data-transfer</tags>
+    <packageSourceUrl>https://github.com/godwitio/packages</packageSourceUrl>
+    <docsUrl>https://godwit.io/docs</docsUrl>
+    <releaseNotes>https://godwit.io/changelog</releaseNotes>
+  </metadata>
+</package>
