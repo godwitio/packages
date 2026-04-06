@@ -13,5 +13,7 @@ Installers:
     AppsAndFeaturesEntries:
       - DisplayName: Godwit Sync
         Publisher: Godwit
+Commands:
+  - godwit
 ManifestType: installer
 ManifestVersion: 1.12.0

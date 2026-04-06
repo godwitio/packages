@@ -19,7 +19,5 @@ Tags:
   - cloud-storage
   - backup
   - data-transfer
-Commands:
-  - godwit
 ManifestType: defaultLocale
 ManifestVersion: 1.12.0
