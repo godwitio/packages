@@ -10,7 +10,6 @@ on:
 
 jobs:
   winget:
-    if: false
     name: Submit to winget-pkgs
     runs-on: ubuntu-latest
     continue-on-error: true
