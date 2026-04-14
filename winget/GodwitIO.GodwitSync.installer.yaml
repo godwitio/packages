@@ -1,11 +1,13 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 PackageIdentifier: GodwitIO.GodwitSync
-PackageVersion: 0.2.3
+PackageVersion: 0.3.1
+Commands:
+  - godwit
 Installers:
   - Architecture: x64
     InstallerType: zip
-    InstallerUrl: https://releases.godwit.io/godwit-sync/v0.2.3/godwit-sync_0.2.3_windows_amd64.zip
-    InstallerSha256: 9c049f0c59b1ecd0c235296ed1e77359c0c9bfacc00d5f4b27287fed21c54bde
+    InstallerUrl: https://downloads.godwit.io/godwit-sync/v0.3.1/godwit-sync_0.3.1_windows_amd64.zip
+    InstallerSha256: 1ac3e49f7fda5ba8288f59065497bec1f98f2d7e5c7917faf42e8ab45a7a376e
     NestedInstallerType: portable
     NestedInstallerFiles:
       - RelativeFilePath: godwit.exe
@@ -13,7 +15,5 @@ Installers:
     AppsAndFeaturesEntries:
       - DisplayName: Godwit Sync
         Publisher: Godwit
-Commands:
-  - godwit
 ManifestType: installer
 ManifestVersion: 1.12.0
