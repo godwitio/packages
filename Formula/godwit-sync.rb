@@ -4,26 +4,26 @@
 class GodwitSync < Formula
   desc "Plan-first S3 object storage migration and sync CLI"
   homepage "https://godwit.io"
-  version "0.3.1"
+  version "0.3.2"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://downloads.godwit.io/godwit-sync/v0.3.1/godwit-sync_0.3.1_darwin_arm64.tar.gz"
-      sha256 "54d48b808dfe68174c67f5e32891882096d7596f52f7b974149fcefacabcd527"
+      url "https://downloads.godwit.io/godwit-sync/v0.3.2/godwit-sync_0.3.2_darwin_arm64.tar.gz"
+      sha256 "fb2aa0d09c55d4525115a034944dfd8ff91e5b78849bf360280e942eba141d0f"
     else
-      url "https://downloads.godwit.io/godwit-sync/v0.3.1/godwit-sync_0.3.1_darwin_amd64.tar.gz"
-      sha256 "406687f97a62e9fdf6dba6ec7835c6eb3abb888b8683b6810fed17ec90dbbf2e"
+      url "https://downloads.godwit.io/godwit-sync/v0.3.2/godwit-sync_0.3.2_darwin_amd64.tar.gz"
+      sha256 "78d6b8c7513cb46383b97576c779d310a5e0ebb8149ae99a6ca236727966a7de"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://downloads.godwit.io/godwit-sync/v0.3.1/godwit-sync_0.3.1_linux_arm64.tar.gz"
-      sha256 "9794471ec00b5adfee5721c5a912222f27d93b4fe886392080cef2b1c515a30c"
+      url "https://downloads.godwit.io/godwit-sync/v0.3.2/godwit-sync_0.3.2_linux_arm64.tar.gz"
+      sha256 "98207309e7c376020d85ee8c9e98b483f8f5a55665d66f01426ac7df94b1c4b4"
     else
-      url "https://downloads.godwit.io/godwit-sync/v0.3.1/godwit-sync_0.3.1_linux_amd64.tar.gz"
-      sha256 "9f382c59093ed503629a9c622d905f901cc8f50c7c8d020c945f1c16a3b4bf59"
+      url "https://downloads.godwit.io/godwit-sync/v0.3.2/godwit-sync_0.3.2_linux_amd64.tar.gz"
+      sha256 "ed75f1c8c9f379517832aaebe20ebe332f985d891b577d60463dacb7c629d223"
     end
   end
 
