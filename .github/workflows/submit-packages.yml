@@ -9,8 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  winget:
-    if: false
+  winget:    
     name: Submit to winget-pkgs
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -32,7 +31,6 @@ jobs:
           token: ${{ secrets.WINGET_GH_TOKEN }}
 
   chocolatey:
-    if: false
     name: Submit to Chocolatey
     runs-on: windows-latest
     continue-on-error: true
