@@ -7,12 +7,22 @@ on:
       - "winget/**"
       - "chocolatey/**"
   workflow_dispatch:
+    inputs:
+      target:
+        description: Which package managers to submit to
+        type: choice
+        default: all
+        options:
+          - all
+          - winget
+          - chocolatey
 
 jobs:
   winget:
     name: Submit to winget-pkgs
     runs-on: windows-latest
     continue-on-error: true
+    if: github.event_name != 'workflow_dispatch' || contains(fromJSON('["all", "winget"]'), inputs.target)
     steps:
       - uses: actions/checkout@v4
 
@@ -38,6 +48,7 @@ jobs:
     name: Submit to Chocolatey
     runs-on: windows-latest
     continue-on-error: true
+    if: github.event_name != 'workflow_dispatch' || contains(fromJSON('["all", "chocolatey"]'), inputs.target)
     steps:
       - uses: actions/checkout@v4
 
