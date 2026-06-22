@@ -2,8 +2,8 @@ $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
     packageName    = 'godwit-sync'
-    url64bit       = 'https://downloads.godwit.io/godwit-sync/v0.3.3/godwit-sync_0.3.3_windows_amd64.zip'
-    checksum64     = '754ecba4f9908fd607960274af60f3bf528d6a80b3d28120b7a7f8cc6e913365'
+    url64bit       = 'https://downloads.godwit.io/godwit-sync/v0.4.1/godwit-sync_0.4.1_windows_amd64.zip'
+    checksum64     = 'df86dc0bead18839a048c77725ae2f760173210752168706f582ab4d28935a5d'
     checksumType64 = 'sha256'
     unzipLocation  = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 }
