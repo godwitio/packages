@@ -9,26 +9,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  winget:    
+  winget:
     name: Submit to winget-pkgs
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
       - name: Extract version from manifest
         id: version
+        shell: pwsh
         run: |
-          version=$(grep '^PackageVersion:' winget/GodwitIO.GodwitSync.yaml | awk '{print $2}')
-          echo "version=$version" >> "$GITHUB_OUTPUT"
+          $version = ((Select-String -Path winget/GodwitIO.GodwitSync.yaml -Pattern '^PackageVersion:\s*(.+)$').Matches[0].Groups[1].Value).Trim()
+          "version=$version" >> $env:GITHUB_OUTPUT
 
-      - name: Submit to winget-pkgs
-        uses: vedantmgoyal9/winget-releaser@v2
-        with:
-          identifier: GodwitIO.GodwitSync
-          version: ${{ steps.version.outputs.version }}
-          installers-regex: '\.zip$'
-          token: ${{ secrets.WINGET_GH_TOKEN }}
+      - name: Submit manifests to winget-pkgs
+        shell: pwsh
+        env:
+          WINGET_GH_TOKEN: ${{ secrets.WINGET_GH_TOKEN }}
+        run: |
+          Invoke-WebRequest https://aka.ms/wingetcreate/latest -OutFile wingetcreate.exe
+          .\wingetcreate.exe submit `
+            --token $env:WINGET_GH_TOKEN `
+            --prtitle "GodwitIO.GodwitSync version ${{ steps.version.outputs.version }}" `
+            winget
 
   chocolatey:
     name: Submit to Chocolatey
